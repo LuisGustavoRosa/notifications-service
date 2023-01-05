@@ -43,7 +43,6 @@ export class NotificationsController {
       notifications : notifications.map(NotificationViewModel.toHTTP)
      };
   }
-
   @Patch(':id/read')
   async read(@Param('id') id: string) {
     await this.readNotification.execute({
